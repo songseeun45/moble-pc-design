@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=800px">
+		<title>moble & pc design</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css"> 
+	</head>
+  <body>
+
+<div id="top">
+  <img src="./images/센녹_moble&pc design.jpg" alt="">
+</div>
+
+<ul class="button">
+  <li><a href="#top">Top</a></li>
+  <li><a href="https://songseeun45.github.io/songseeun_portfolio/">Home</a></li>
+</ul>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+		<script>
+        $(function () {
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 500);//움직이는 시간 조정
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <!--이동시 부드럽게 이동-->
+</html>
